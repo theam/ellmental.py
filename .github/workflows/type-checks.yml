@@ -1,0 +1,47 @@
+name: Type checks
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "apps/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./
+
+    steps:
+      #-------------------------------------#
+      #  Check out repo and set up Python   #
+      #-------------------------------------#
+      - name: Check out the repository
+        uses: actions/checkout@v3
+        working-directory: ./apps/semantic_search
+
+      #---------------------------#
+      #       Set-up python       #
+      #---------------------------#
+      - name: Set up Python
+        id: setup-python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      #----------------------------------------#
+      #       Install & configure Poetry       #
+      #----------------------------------------#
+      - run: pipx install poetry
+        with:
+          cache: "poetry"
+
+      - run: poetry install
+      - run: echo "$(poetry env info --path)/bin" >> $GITHUB_PATH
+
+      #----------------------------------------#
+      #            Run type checks             #
+      #----------------------------------------#
+      - uses: jakebailey/pyright-action@v1

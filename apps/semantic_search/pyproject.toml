@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "semantic_search"
+version = "0.1.0"
+description = ""
+license = "Apache 2.0"
+authors = ["The Agile Monkeys"]
+readme = "README.md"
+
+homepage = "https://github.com/theam/ellmental.py"
+repository = "https://github.com/theam/ellmental.py"
+documentation = ""
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.97.0"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+chromadb = "^0.4.0"
+python-dotenv = "^1.0.0"
+gradio-client = "^0.2.6"
+supabase = "^1.0.3"
+openai = "^0.27.8"
+
+[tool.poetry.scripts]
+start = "semantic_search:start"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+pyright = "^1.1.317"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+include = ["./*.py"]
+defineConstant = { DEBUG = true }
+venvPath = "."
+venv = ".venv"
+reportMissingImports = true
+reportMissingTypeStubs = false

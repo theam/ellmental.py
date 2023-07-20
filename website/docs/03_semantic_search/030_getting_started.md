@@ -1,0 +1,145 @@
+---
+slug: /semantic-search/getting-started
+title: Getting Started
+sidebar_label: Getting Started
+---
+
+import TerminalWindow from '@site/src/components/TerminalWindow/TerminalWindow'
+
+# Getting started
+
+In this section, you will look at different ways to set up, run and consume this service on your local machine. You can choose between using Docker, Makefile, or Poetry.
+
+## Project configuration
+
+This application requires some configuration to be set. The recommended way is by using a `.env` file. You can find an example of this file in the application's directory (`apps/semantic_search`). You can copy this file and rename it to `.env`. Then, you can edit the values of the variables to match your desired configuration.
+
+The following table describes the different variables that can be set on the `.env` file:
+
+| Variable | Required | Description |
+| -------- | -------- | ----------- |
+| `SERVER_PORT` | :white_check_mark: | The port where the server will be running |
+| `EMBEDDING_GENERATOR` | :white_check_mark: | The embedding generator to use. You can choose one of [the available models](./031_embedding_generators.md) |
+| `EMBEDDING_STORE` | :white_check_mark: | The embedding store to use. You can choose one of [the available stores](./032_embedding_stores.md) |
+| `MATCH_THRESHOLD` | :white_check_mark: | The threshold to use when matching embeddings. The value has to be between 0 and 1, being 1 an exact match |
+| `BATCH_SIZE` | :white_check_mark: | The amount of text to be used when generating embeddings |
+| `SPACES_URL` | :x: | The URL where the embedding generator is located. This is only required if you are using the `SPACES_TEXT` or `SPACES_INSTRUCT` embedding generator |
+| `SPACES_KEY` | :x: | The key to use when generating embeddings. This is only required if you are using the `SPACES_TEXT` or `SPACES_INSTRUCT` embedding generator |
+| `OPENAI_TYPE` | :x: | The type of OpenAI model to use when generating embeddings (either from OpenAI or Azure). This is only required if you are using the `OPENAI` embedding generator |
+| `OPENAI_MODEL` | :x: | The model to use when generating embeddings. This is only required if you are using the `OPENAI` embedding generator |
+| `OPENAI_API_KEY` | :x: | The key to use when generating embeddings. This is only required if you are using the `OPENAI` embedding generator |
+| `AZURE_OPENAI_ENDPOINT` | :x: | The endpoint to use when generating embeddings. This is only required if you are using the `azure` OpenAI integration |
+| `AZURE_OPENAI_VERSION` | :x: | The version to use when generating embeddings. This is only required if you are using the `AZURE_OPENAI` embedding generator |
+| `AZURE_OPENAI_USE_ACTIVE_DIRECTORY` | :x: | Whether to use Active Directory when generating embeddings. This is only required if you are using the `AZURE_OPENAI` embedding generator |
+| `STORE_PATH` | :x: | The path where the embeddings will be stored. This is only required if you are using the `LOCAL` embedding store |
+| `CHROMA_URL` | :x: | The URL of the Chroma instance to use. This is only required if you are using the `CHROMA` embedding store |
+| `CHROMA_PORT` | :x: | The port of the Chroma instance to use. This is only required if you are using the `CHROMA` embedding store |
+| `CHROMA_COLLECTION` | :x: | The collection to use when storing embeddings. This is only required if you are using the `CHROMA` embedding store |
+| `SUPABASE_URL` | :x: | The URL of the Supabase instance to use. This is only required if you are using the `SUPABASE` embedding store |
+| `SUPABASE_KEY` | :x: | The key to use when connecting to Supabase. This is only required if you are using the `SUPABASE` embedding store |
+| `SUPABASE_TABLE` | :x: | The table to use when storing embeddings. This is only required if you are using the `SUPABASE` embedding store |
+| `SUPABASE_FUNCTION` | :x: | The function to use when querying embeddings. This is only required if you are using the `SUPABASE` embedding store |
+
+
+
+
+## Running the project
+
+There are several ways to run the project. You can use Docker, Makefile, or Poetry. You can find instructions on how to run the project with each of these options below.
+
+### Docker
+
+The most recommended way to set up the project is by using Docker. The project comes with a Dockerfile, which allows you to build a virtual image of a machine with all the configurations and dependencies needed to run the project. 
+
+To use Docker, you need to have it installed on your system. You can find instructions on how to install Docker [here](https://docs.docker.com/get-docker/).
+
+Once you have Docker installed, you must move to the `semantic_search` directory. To run that, open a terminal on the project's root directory and run the following command:
+
+<TerminalWindow>
+
+```bash
+cd apps/semantic_search
+```
+
+</TerminalWindow>
+
+
+Once you are in the `semantic_search` directory. You can proceed to build and run the Docker image. The build will create a virtual machine with all the requirements for the project to run correctly. Once the build is finished, just run the image to get your project up and running.
+
+<TerminalWindow>
+
+```bash
+docker build -t semantic-search .
+docker run -p 8000:8000 semantic-search
+```
+
+</TerminalWindow>
+
+
+### Makefile
+
+Another way to run the application is by using the Makefile script on the project directory. First, ensure that both [Make](https://makefiletutorial.com/) and [Poetry](https://python-poetry.org/docs/) are installed on your system.
+
+Once you have [Make](https://makefiletutorial.com/) and [Poetry](https://python-poetry.org/docs/) installed, you must move to the `semantic_search` directory. To run that, open a terminal on the project's root directory and run the following command:
+
+<TerminalWindow>
+
+```bash
+cd apps/semantic_search
+```
+
+</TerminalWindow>
+
+If it's the first time that you are running the project with Make, you must run the `init` command. This command will install all the dependencies needed to run the project.
+
+<TerminalWindow>
+
+```bash
+make init
+```
+
+</TerminalWindow>
+
+Once the dependencies are installed, you can run the project by using the `dev` command.
+
+<TerminalWindow>
+
+```bash
+make dev
+```
+
+</TerminalWindow>
+
+### Poetry
+
+The most basic way to run the project is by installing the dependencies on your machine and running it with [Poetry](https://python-poetry.org/docs/). To do this, you must have [Poetry](https://python-poetry.org/docs/) installed on your system.
+
+Once you have [Poetry](https://python-poetry.org/docs/) installed, you must move to the `semantic_search` directory. To run that, open a terminal on the project's root directory and run the following command:
+
+<TerminalWindow>
+
+```bash
+cd apps/semantic_search
+```
+
+</TerminalWindow>
+
+If it's the first time that you are running the project with Poetry, you must run the `install` command. This command will install all the dependencies needed to run the project.
+
+<TerminalWindow>
+
+```bash
+poetry install
+```
+
+</TerminalWindow>
+
+Once the dependencies are installed, you can run the project by using the `start` command.
+
+<TerminalWindow>
+
+```bash
+poetry run start
+```
+
+</TerminalWindow>
