@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[Documentation site](https://python.llmental.com) | [Discord](https://discord.gg/34cBbvjjAx) | [Contributing](website/CONTRIBUTING.md)
+[Documentation site](https://python.ellmental.com) | [Discord](https://discord.gg/34cBbvjjAx) | [Contributing](website/CONTRIBUTING.md)
 
 </div>
 
