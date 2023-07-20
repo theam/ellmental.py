@@ -1,4 +1,5 @@
-![eLLMental](website/static/img/logoellmental.png)
+![eLLMental](website/static/img/logoellmental.png#gh-light-mode-only)
+![eLLMental](website/static/img/ellemental%20white.png#gh-dark-mode-only)
 
 <div align="center">
 
