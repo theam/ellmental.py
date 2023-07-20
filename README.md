@@ -26,7 +26,7 @@ Its objective is to create an ecosystem of specific and finished components that
 
 ## Table of Contents
 
-- [Why not use other tools of the market (Langchain, ChromaDB, Pinecone, etc.)?](#why-not-use-other-tools-of-the-market-langchain-chromadb-pinecone-etc)
+- [Why not use other tools (Langchain, ChromaDB, Pinecone, etc.)?](#why-not-use-other-tools-of-the-market-langchain-chromadb-pinecone-etc)
 - [What can I do with eLLMental now?](#what-can-i-do-with-ellmental-now)
 - [What can I do with a Semantic Search service?](#what-can-i-do-with-a-semantic-search-service)
 - [Quick Start Guide](#quick-start-guide)
