@@ -34,7 +34,7 @@ Its objective is to create an ecosystem of specific and finished components that
 - [License](#license)
 - [Contact](#contact)
 
-## Why not use other tools of the market (Langchain, ChromaDB, Pinecone, etc.)?
+## Why not use other tools (Langchain, ChromaDB, Pinecone, etc.)?
 
 This initiative started when we were developing use cases for our own clients. We tried using the tools and utilities available at the moment to achieve our objectives, but they weren’t good for us so we had to discard them.
 
