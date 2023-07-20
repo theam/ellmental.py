@@ -35,8 +35,7 @@ Its objective is to create an ecosystem of specific and finished components that
 
 ## Why not use other tools of the market (Langchain, ChromaDB, Pinecone, etc.)?
 
-This initiative started when we were developing different use cases for our own clients, and after trying different tools and utilities that can be found nowadays to achieve our objectives
-After trying them, they were not good enough for us, and we had to discard them.
+This initiative started when we were developing use cases for our own clients. We tried using the tools and utilities available at the moment to achieve our objectives, but they weren’t good for us so we had to discard them.
 
 Because of that, we decided to build our own solution with these core principles in mind:
 
@@ -58,7 +57,7 @@ It works as an **independent service with a REST API**, so you can use the eLLMe
 
 A semantic search service is like a super-smart search engine. Instead of just looking for exact word matches, it tries to understand what you really mean when you type in a search. It does this by figuring out the context of words and understanding synonyms. This way, it can give you more relevant and personalized results.
 
-You can use a semantic search for a huge variety of use cases. These are two of them:
+You can use a semantic search for a huge variety of use cases. These are some of them:
 
 - **Empowering Large Language Models (LLMs) with Factual Grounding**: Semantic search can dramatically enhance the performance of Large Language Models for specific use cases, ensuring quality, accuracy, and relevance of the outputs of the model by injecting context and therefore, reducing its scope.
 
