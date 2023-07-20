@@ -12,9 +12,26 @@ Up to now, the most common way to search for information is by using keywords. S
 
 ## How does it work?
 
-To perform a semantic search, we need a way to get how similar a piece of text to a query. In other words, we need to compare the meaning of some text and how related it is to a question. We cant perform calculations on words, just numbers. However, there is a way to generate a vector that represents the meaning of a piece of text. This vector representation is called an embedding. This transformation is usually done by a neural network trained for this kind of task. This vector is then compared to other vectors to find similar documents.
+A semantic search service allows us to generate embeddings based on natural language text. An embedding is a 
+semantic representation of a text in the "semantics space", an imaginary high-dimensional mathematical representation of 
+all the possible semantics. In this space, each concept is associated with a specific point in a way that words or 
+phrases that are similar from a meaning point of view are placed closer than those with different meanings. In short, an embedding is an array of numbers representing the text's meaning in the semantics space.
 
-To have a semantic search system, you would need to have the following components:
+For example, If we were to represent the embeddings of the words swimming, swam, walking, walked in a very simplified 
+visualization, we could see them like this:
+
+<img
+  alt="Visualization of word embeddings"
+  src={require("../../static/img/word2vec.png").default}
+  style={{
+    width: "300px",
+  }}/>
+
+Embeddings are useful because they allow you to compare pieces of text by their meaning rather than by their characters 
+or other properties. For example, the embeddings of the sentences "I like apples" and "I like oranges" will be very 
+similar, because the vector representation of the sentences is similar.
+
+Overall, you would need to have the following components to have an end-to-end semantic search system:
 
 1. A system that can ingest text and create embeddings for it.
 2. A database that can store those embeddings.

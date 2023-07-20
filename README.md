@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[Documentation site](https://python.ellmental.com) | [Discord](https://discord.gg/34cBbvjjAx) | [Contributing](website/CONTRIBUTING.md)
+[Documentation site](https://python.ellmental.com) | [Discord](https://discord.gg/34cBbvjjAx) | [Contributing](./CONTRIBUTING.md)
 
 </div>
 
@@ -104,7 +104,7 @@ We believe that community contributions are essential to the development and ref
 3. Look at the [Open Issues](https://github.com/theam/ellmental.py/issues), choose one that interests you, and start contributing.
 4. Spread the word about eLLMental!
 
-Detailed instructions for community contributions can be found in our [Contributing Guide](website/CONTRIBUTING.md).
+Detailed instructions for community contributions can be found in our [Contributing Guide](./CONTRIBUTING.md).
 
 ## License
 

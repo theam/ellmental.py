@@ -26,7 +26,22 @@ const sidebars = {
       },
       items: ['semantic_search/getting_started', 'semantic_search/embedding_generators', 'semantic_search/embedding_stores'],
     },
-    'contributing',
+    {
+      type: 'category',
+      label: 'Community',
+      link: {
+        type: 'doc',
+        id: 'community/index'
+      },
+      items: [
+        'community/contributing',
+        {
+          type: 'doc',
+          id: 'community/code_of_conduct',
+          label: 'Code of Conduct'
+        }
+      ]
+    },
   ],
 };
 
