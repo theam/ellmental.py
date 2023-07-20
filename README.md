@@ -1,8 +1,9 @@
-![eLLMental](website/static/img/logoellmental.png)
+![eLLMental](website/static/img/logoellmental.png#gh-light-mode-only)
+![eLLMental](website/static/img/ellemental%20white.png#gh-dark-mode-only)
 
 <div align="center">
 
-[Documentation site](https://python.ellmental.com) | [Discord](https://discord.gg/34cBbvjjAx) | [Contributing](./CONTRIBUTING.md)
+[📚 Documentation site](https://python.ellmental.com) | [💬 Discord](https://discord.gg/34cBbvjjAx) | [🤝 Contributing](./CONTRIBUTING.md)
 
 </div>
 
