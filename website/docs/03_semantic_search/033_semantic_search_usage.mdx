@@ -36,11 +36,11 @@ You can try the service by sending a `POST` request to [http://localhost:8000/le
 ```json
 {
     "items": [
-        {
-            "content": "Grain in dogs' food is not good for them.",
-            "metadata": {"key1": "value1", "key2": "value2"},
-            "cluster_id": "your_file_id"
-        },
+      {
+        "content": { "text": "Grain in dogs food is not good for them."},      
+        "metadata": {"key1": "value1", "key2": "value2"},
+        "cluster_id": "your_file_id"
+      }
     ]
 }
 ```
@@ -53,11 +53,11 @@ You can try the service by sending a `POST` request to [http://localhost:8000/le
   --header 'Content-Type: application/json' \
   --data '{
     "items": [
-        {
-            "content": "Grain in dogs'\'' food is not good for them.",
-            "metadata": {"key1": "value1", "key2": "value2"},
-            "cluster_id": "your_file_id"
-        }
+      {
+        "content": { "text": "Grain in dogs food is not good for them."},      
+        "metadata": {"key1": "value1", "key2": "value2"},
+        "cluster_id": "your_file_id"
+      }
     ]
   }'
 ```
