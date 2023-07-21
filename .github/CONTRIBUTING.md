@@ -1,9 +1,98 @@
 
-We're happy to see that you're interested in contributing, that's great! In the sections below, you can see how to report
-bugs or suggest enhancements.
+Welcome and thank you for your interest in contributing to our project! This endeavor thrives on collaboration and the unique inputs from our diverse community. Whether you're fixing bugs, suggesting enhancements, improving our documentation, or sharing ideas, your contribution is valuable to us.
 
+Every idea, big or small, holds the potential to make a significant impact, and we're excited to see your inspirational contributions. You don't have to be an expert in coding to contribute and make a difference. Read on to find how you can participate and help us continue to expand the boundaries of our project. Welcome aboard!
 
-## :bug: Reporting bugs
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Code of Conduct](#code-of-conduct)
+- [Setting Up a Development Environment](#setting-up-a-development-environment)
+  - [Prerequisites](#prerequisites)
+  - [Getting the Source Code](#getting-the-source-code)
+  - [Working with the Project](#working-with-the-project)
+  - [Importing the Project to Your IDE](#importing-the-project-to-your-ide)
+  - [Running Tests](#running-tests)
+- [Reporting bugs](#reporting-bugs)
+- [Suggesting Enhancements](#suggesting-enhancements)
+- [Improving documentation](#improving-documentation)
+  - [Documentation principles and practices](#documentation-principles-and-practices)
+    - [Principles](#principles)
+    - [Practices](#practices)
+- [Create your very first GitHub issue](#create-your-very-first-github-issue)
+- [Your First Code Contribution](#your-first-code-contribution)
+- [Get in touch!](#get-in-touch)
+
+## Code of Conduct
+
+Everyone participating in this project is expected to abide by the [eLLMental Code of Conduct](CODE_OF_CONDUCT.md), which is based on the Contributor Covenant Code of Conduct.
+
+If you encounter any behavior that violates our code of conduct, please send an email to `info@theagilemonkeys.com` or a direct message to any of the administrators in our official Discord server. All reports will be examined and investigated promptly and in a manner that respects the privacy and safety of the affected individual(s).
+
+## Setting Up a Development Environment
+
+Here's how you can prep you development environment for contributing to this [poetry](https://python-poetry.org/) project written in Python.
+
+### Prerequisites
+
+1. Ensure you have Python on version 3.11 (at least) installed on your local machine. This is needed to run the Python compiler. You can download it in [Python's official site](https://www.python.org/downloads/).
+
+2. Install poetry command line tool. Refer to Poetry's [official guide](https://python-poetry.org/docs/) for installation instructions on your Operating System.
+
+### Getting the Source Code
+
+1. Fork the repository from the main GitHub page ([theam/ellmental.py](https://github.com/theam/ellmental.py)).
+
+2. Clone your forked repository to your local machine.
+
+   ```
+   git clone https://github.com/<Your Username>/eLLMental.py.git
+   ```
+
+3. Navigate into the cloned repository:
+
+   ```
+   cd ellmental.py/apps
+   ```
+
+4. Based on the app abstraction you're contributing to, you can check the README.md file in the corresponding folder for
+   more information on how to run the app. For example, you can modify `apps/semantic_search` project to create a new
+   implementation for the `EmbeddingStore` abstraction.
+
+### Working with the Project
+
+1. To start running a project using poetry, run the following commands in your terminal:
+
+   ```
+     # To install dependencies from the project's pyproject.toml file
+     poetry install
+   ```
+
+   ```
+     # To start the project
+     poetry run start
+   ```
+
+> Remember to fill .env files if needed. You can find an example of the .env file in the root of the app project. For example,  
+> `apps/semantic_search/.env.example` file.
+
+### Importing the Project to Your IDE
+
+If you are using PyCharm, importing a Python project is as easy as File -> Open, and then open the project's folder.
+
+### Running Tests
+
+To ensure that your setup is working correctly, try running the existing tests in the project repository:
+
+```
+poetry run test
+```
+
+Tests may take a while to run, but if you see the first few of them passing, your setup is probably correct, so you can cancel the process or wait for all tests to pass.
+
+That’s it! You are now all set up and ready to contribute. Remember, if you have any trouble or need further clarification with setting up the environment, don’t hesitate to reach out. We are more than happy to assist you.
+
+## Reporting bugs
 
 Before creating a bug report, please search for similar issues to make sure that they're not already reported. If you
 don't find any, go ahead and create an issue including as many details as possible.
@@ -25,7 +114,7 @@ problem:
 
 > Remember to label the issue with a "bug" tag
 
-## :bulb: Suggesting Enhancements
+## Suggesting Enhancements
 
 Enhancement suggestions are tracked as GitHub issues. Make sure you provide the following information:
 
@@ -40,10 +129,10 @@ Enhancement suggestions are tracked as GitHub issues. Make sure you provide the 
 
 > Remember to label the issue with an "enhancement" tag
 
-## :book: Improving documentation
+## Improving documentation
 
-[eLLMental documentation](https://docs.ellmental.com) is treated as a live document that continues improving on a daily basis. If you find something that is missing or can be improved, please contribute, it will be of great help for other developers.
-To contribute you can use the button "Edit on github" at the top of each chapter.
+[eLLMental documentation](https://python.ellmental.com) is treated as a live document that continues improving on a daily basis. If you find something that is missing or can be improved, please contribute, it will be of great help for other developers.
+To contribute you can use the button "Edit in GitHub" at the top of each chapter.
 
 ### Documentation principles and practices
 
@@ -142,4 +231,8 @@ Unsure where to begin contributing to eLLMental? You can start by looking throug
 
 Both issue lists are sorted by the total number of comments. While not perfect, number of comments is a reasonable proxy for impact a given change will have.
 
-Make sure that you assign the chosen issue to yourself to communicate your intention to work on it and reduce the possibilities of other people taking the same assignment.
+Once you've chosen an issue to work on, please assign it to yourself. This helps communicate your intention to contribute and reduces the chance of duplicate work.
+
+## Get in touch!
+
+If you feel lost, don't hesitate to reach out the core team. You can connect with us via email writing to [info@theagilemonkeys.com](mailto:info@theagilemonkeys.com), or joining our official Discord server. We will be more than happy to hear about you!
