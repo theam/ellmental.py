@@ -1,0 +1,100 @@
+---
+slug: /semantic-search/usage
+title: Usage
+sidebar_label: Usage
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+The Semantic Search service can be used through a REST API. You would need to consume it by sending HTTP requests to the different service endpoints. There is an endpoint for every action available in the service.
+
+## OpenAPI documentation
+
+The REST API has been developed following the OpenAPI specification. This means that the REST API complies with the OpenAPI standard and that you can use the OpenAPI documentation to learn how to use the API. 
+
+In fact, the Semantic Search service provides an endpoint where you can find the OpenAPI documentation. You can find it at [http://localhost:8000/docs](http://localhost:8000/docs).
+
+This endpoint will open a [Swagger UI](https://swagger.io/) page where you can find all the information about the API. You can also try the API from this page, as it provides a way to send requests to the different endpoints.
+
+Additionally, you can get the openapi.json file from the `/docs` endpoint. You can find it at [http://localhost:8000/openapi.json](http://localhost:8000/openapi.json).
+
+## Available endpoints
+
+The Semantic Search service provides two endpoints: `learn` and `search`. You can find more information about them in the following sections.
+
+### Learn endpoint
+
+With the `learn` endpoint, you can make your service learn from a set of documents' content (or any text you'd like!). You
+just need to provide the endpoint with `content`, so it can then be turned into embeddings and stored in the local database.
+
+You can try the service by sending a `POST` request to [http://localhost:8000/learn](http://localhost:8000/learn).
+
+<Tabs groupId="api-request">
+<TabItem value="json" label="JSON Body" default>
+
+```json
+{
+    "items": [
+      {
+        "content": { "text": "Grain in dogs food is not good for them."},      
+        "metadata": {"key1": "value1", "key2": "value2"},
+        "cluster_id": "your_file_id"
+      }
+    ]
+}
+```
+
+</TabItem>
+<TabItem value="curl" label="CURL Request">
+
+```bash
+  curl --location 'http://127.0.0.1:8000/learn' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "items": [
+      {
+        "content": { "text": "Grain in dogs food is not good for them."},      
+        "metadata": {"key1": "value1", "key2": "value2"},
+        "cluster_id": "your_file_id"
+      }
+    ]
+  }'
+```
+
+  </TabItem>
+</Tabs>
+
+
+### Search endpoint
+
+With the search endpoint, you will get answers to your questions, based on what you have ingested with
+the `learn` endpoint. You just need to provide the endpoint with a `query`, and the service will return the most
+relevant information based on the embeddings stored in the local database.
+
+You can try this endpoint by sending a `POST` request to [http://localhost:8000/search](http://localhost:8000/search) with the following body:
+
+<Tabs groupId="api-request">
+<TabItem value="json" label="JSON Body" default>
+
+```json
+{
+  "query": "How does grain food affect dogs?",
+  "cluster_ids": ["your_file_id"]
+}
+```
+
+</TabItem>
+<TabItem value="curl" label="CURL Request">
+
+```bash
+  curl --location 'http://127.0.0.1:8000/search' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "query": "How does grain food affect dogs?",
+  "cluster_ids": ["your_file_id"]
+  }'
+```
+
+  </TabItem>
+</Tabs>

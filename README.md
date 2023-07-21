@@ -26,10 +26,13 @@ Its objective is to create an ecosystem of specific and finished components that
 
 ## Table of Contents
 
-- [Why not use other tools (Langchain, ChromaDB, Pinecone, etc.)?](#why-not-use-other-tools-of-the-market-langchain-chromadb-pinecone-etc)
+- [Table of Contents](#table-of-contents)
+- [Why not use other tools (Langchain, ChromaDB, Pinecone, etc.)?](#why-not-use-other-tools-langchain-chromadb-pinecone-etc)
 - [What can I do with eLLMental now?](#what-can-i-do-with-ellmental-now)
-- [What can I do with a Semantic Search service?](#what-can-i-do-with-a-semantic-search-service)
+- [What can I do with a semantic search service?](#what-can-i-do-with-a-semantic-search-service)
 - [Quick Start Guide](#quick-start-guide)
+  - [Running the service](#running-the-service)
+  - [Using the service](#using-the-service)
 - [Contributing and Community](#contributing-and-community)
 - [License](#license)
 - [Contact](#contact)
@@ -75,6 +78,8 @@ You can use a semantic search for a huge variety of use cases. These are some of
 In this guide, you'll have your very own instance of a semantic search service up and running on your computer,
 powered by OpenAI embeddings and the practicality of a local database. The whole process takes less than 5 minutes! 🌈
 
+### Running the service
+
 To begin working locally with **eLLMental**, you'll need to first run the `quickstart.sh` script, which underneath calls
 a local Docker instance. Said that here's a summary of the steps you'll need to follow:
 
@@ -88,11 +93,13 @@ just running: `./quickstart.sh`
 > This script will ask you for your OPENAI API key, and then it will start the service using
 > docker.
 
+### Using the service
+
 Once the docker container is running, you will get a semantic search service running exposing three endpoints:
 
-1. The documentation endpoint, with information about how to use the API: `http://localhost:8000/docs`
-2. The learn endpoint: `http://localhost:8000/learn`
-3. The search endpoint: `http://localhost:8000/search`
+1. The documentation endpoint, with information about how to use the API: [http://localhost:8000/docs](http://localhost:8000/docs)
+2. The learn endpoint: [http://localhost:8000/learn](http://localhost:8000/learn)
+3. The search endpoint: [http://localhost:8000/search](http://localhost:8000/search)
 
 In our [documentation site](https://python.ellmental.com) you will find more information about the capabilities of the service. Like for example, how to use Azure OpenAI to generate the embeddings, or how to make use of your own database.
 
