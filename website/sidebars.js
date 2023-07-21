@@ -18,29 +18,34 @@ const sidebars = {
     'quickstart',
     {
       type: 'category',
-      label: 'Semantic search',
+      label: 'Semantic Search',
       collapsed: false,
       link: {
         type: 'doc',
         id: 'semantic_search/semantic_search',
       },
-      items: ['semantic_search/getting_started', 'semantic_search/embedding_generators', 'semantic_search/embedding_stores'],
+      items: [
+        'semantic_search/getting_started',
+        'semantic_search/semantic_search_usage',
+        'semantic_search/embedding_generators',
+        'semantic_search/embedding_stores',
+      ],
     },
     {
       type: 'category',
       label: 'Community',
       link: {
         type: 'doc',
-        id: 'community/index'
+        id: 'community/index',
       },
       items: [
         'community/contributing',
         {
           type: 'doc',
           id: 'community/code_of_conduct',
-          label: 'Code of Conduct'
-        }
-      ]
+          label: 'Code of Conduct',
+        },
+      ],
     },
   ],
 };
