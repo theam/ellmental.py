@@ -131,7 +131,7 @@ So decide one or another being conscious about your intention.
 
 ## Create your very first GitHub issue
 
-[Click here](https://github.com/theam/eLLMental/issues/new) to start making contributions to eLLMental.
+[Click here](https://github.com/theam/ellmental.py/issues/new) to start making contributions to eLLMental.
 
 ## Your First Code Contribution
 
