@@ -1,4 +1,3 @@
-# Contributing Guide
 
 Welcome and thank you for your interest in contributing to our project! This endeavor thrives on collaboration and the unique inputs from our diverse community. Whether you're fixing bugs, suggesting enhancements, improving our documentation, or sharing ideas, your contribution is valuable to us.
 
