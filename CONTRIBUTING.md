@@ -132,75 +132,31 @@ Enhancement suggestions are tracked as GitHub issues. Make sure you provide the 
 
 ## Improving documentation
 
-[eLLMental documentation](https://python.ellmental.com) is treated as a live document that continues improving on a daily basis. If you find something that is missing or can be improved, please contribute, it will be of great help for other developers.
+[eLLMental documentation](https://python.ellmental.com) is treated as a live document that continues improving on a daily basis. **If you find something that is missing or can be improved, please contribute**, it will be of great help for other developers.
 To contribute you can use the button "Edit in GitHub" at the top of each chapter.
 
-### Documentation principles and practices
+## Principles
 
-The ultimate goal of a technical document is to translate the knowledge from the technology creators into the reader's mind so that they learn. The challenging
+The ultimate goal of a technical document is to **translate the knowledge from the technology creators into the reader's mind** so that they learn. The challenging
 part here is the one in which they learn. It is challenging because, under the same amount of information, a person can suffer an information overload because
 we (humans) don't have the same information-processing capacity. That idea is going to work as our compass, it should drive our efforts so people with less
 capacity is still able to follow and understand our documentation.
 
-To achieve our goal we propose writing documentation following these principles:
+To achieve our goal we propose **writing documentation following these principles:**
 
-1. Clean and Clear
-2. Simple
-3. Coherent
-4. Explicit
-5. Attractive
-6. Inclusive
-7. Cohesive
+|                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :heavy_check_mark: **Clean and Clear** | Less is more. Apple is, among many others, a good example of creating clean and clear content, where visual elements are carefully chosen to look beautiful (e.g. [Apple's swift UI](https://developer.apple.com/tutorials/swiftui)) and making the reader getting the point as soon as possible. <br></br> <br></br> The intention of every section, paragraph, and sentence must be clear, we should avoid writing details of two different things even when they are related.It is better to link pages and keep the focus and the intention clear, Wikipedia is the best example on this. |
+| :ok_hand: **Simple**                   | Technical writings deal with different backgrounds and expertise from the readers. We should not assume the reader knows everything we are talking about but we should not explain everything in the same paragraph or section. Every section has a goal to stick to the goal and link to internal or external resources to go deeper. <br></br> <br></br> Diagrams are great tools, you know a picture is worth more than a thousand words unless that picture contains too much information. Keep it simple intentionally omitting details.                                                 |
+| :100: **Coherent**                     | The documentation tells a story. Every section should integrate naturally without making the reader switch between different contexts. Text, diagrams, and code examples should support each other without introducing abrupt changes breaking the reader’s flow. Also, the font, colors, diagrams, code samples, animations, and all the visual elements we include, should support the story we are telling.                                                                                                                                                                                | 
+| :dart: **Explicit**                    | Go straight to the point without assuming the readers should know about something. Again, link internal or external resources to clarify. <br></br> <br></br> The index of the whole content must be visible all the time so the reader knows exactly where they are and what is left.                                                                                                                                                                                                                                                                                                        |
+| :heart_eyes: **Attractive**            | Our text must be nice to read, our diagrams delectable to see, and our site… a feast for the eyes!!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| :link: **Inclusive**                   | Everybody should understand our writings, especially the topics at the top. We have arranged the documentation structure in a way that anybody can dig deeper by just going down so, sections 1 to 4 must be suitable for all ages. <br></br> <br></br> Use gender-neutral language to avoid the use of he, him, his to refer to undetermined gender. It is better to use their or they as a gender-neutralapproach than s/he or similars.                                                                                                                                                    |
+| :writing_hand: **Cohesive**            | Writing short and concise sentences is good, but remember to use proper connectors (“Therefore”, “Besides”, “However”, “thus”, etc) that provide a sense of continuation to the whole paragraph. If not, when people read the paragraphs, their internal voice sounds like a robot with unnatural stops.                                                                                                                                                                                                                                                                                      |
 
-#### Principles
 
-**1. Clean and Clear**
 
-Less is more. Apple is, among many others, a good example of creating clean and clear content, where visual elements are carefully chosen to look beautiful
-(e.g. [Apple's swift UI](https://developer.apple.com/tutorials/swiftui)) and making the reader getting the point as soon as possible.
-
-The intention of every section, paragraph, and sentence must be clear, we should avoid writing details of two different things even when they are related.
-It is better to link pages and keep the focus and the intention clear, Wikipedia is the best example on this.
-
-**2. Simple**
-
-Technical writings deal with different backgrounds and expertise from the readers. We should not assume the reader knows everything we are talking about
-but we should not explain everything in the same paragraph or section. Every section has a goal to stick to the goal and link to internal or external resources
-to go deeper.
-
-Diagrams are great tools, you know a picture is worth more than a thousand words unless that picture contains too much information.
-Keep it simple intentionally omitting details.
-
-**3. Coherent**
-
-The documentation tells a story. Every section should integrate naturally without making the reader switch between different contexts. Text, diagrams,
-and code examples should support each other without introducing abrupt changes breaking the reader’s flow. Also, the font, colors, diagrams, code samples,
-animations, and all the visual elements we include, should support the story we are telling.
-
-**4. Explicit**
-
-Go straight to the point without assuming the readers should know about something. Again, link internal or external resources to clarify.
-
-The index of the whole content must be visible all the time so the reader knows exactly where they are and what is left.
-
-**5. Attractive**
-
-Our text must be nice to read, our diagrams delectable to see, and our site… a feast for the eyes!!
-
-**6. Inclusive**
-
-Everybody should understand our writings, especially the topics at the top. We have arranged the documentation structure in a way that anybody can dig
-deeper by just going down so, sections 1 to 4 must be suitable for all ages.
-
-Use gender-neutral language to avoid the use of he, him, his to refer to undetermined gender. It is better to use their or they as a gender-neutral
-approach than s/he or similars.
-
-**7. Cohesive**
-
-Writing short and concise sentences is good, but remember to use proper connectors (“Therefore”, “Besides”, “However”, “thus”, etc) that provide a
-sense of continuation to the whole paragraph. If not, when people read the paragraphs, their internal voice sounds like a robot with unnatural stops.
-
-#### Practices
+## Practices
 
 There are many writing styles depending on the type of document. It is common within technical and scientific writing to use Inductive and/or Deductive styles
 for paragraphs. They have different outcomes and one style may suit better in one case or another, that is why it is important to know them, and decide which
