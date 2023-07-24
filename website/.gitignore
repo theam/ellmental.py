@@ -8,9 +8,6 @@
 .docusaurus
 .cache-loader
 
-# Static files to be ignored
-/static/gitignore
-
 # Misc
 .DS_Store
 .env.local
