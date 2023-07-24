@@ -31,22 +31,7 @@ const sidebars = {
         'semantic_search/embedding_stores',
       ],
     },
-    {
-      type: 'category',
-      label: 'Community',
-      link: {
-        type: 'doc',
-        id: 'community/index',
-      },
-      items: [
-        'community/contributing',
-        {
-          type: 'doc',
-          id: 'community/code_of_conduct',
-          label: 'Code of Conduct',
-        },
-      ],
-    },
+    'community',
   ],
 };
 

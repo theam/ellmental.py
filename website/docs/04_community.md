@@ -7,4 +7,4 @@ Community contributions are essential to the development and refinement of eLLMe
 3. Look at the [Open Issues](https://github.com/theam/ellmental/issues), choose one that interests you, and start contributing.
 4. Spread the word about eLLMental!
 
-Find detailed instructions and guidelines in the [Contributing Guide](contributing), and make sure to read our [Code of Conduct](code_of_conduct) before you start contributing.
+Find detailed instructions and guidelines in the [Contributing Guide](https://github.com/theam/ellmental.py/blob/main/CONTRIBUTING.md), and make sure to read our [Code of Conduct](https://github.com/theam/ellmental.py/blob/main/CODE_OF_CONDUCT.md) before you start contributing.
