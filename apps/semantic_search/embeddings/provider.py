@@ -10,14 +10,14 @@ class EmbeddingsGeneratorProvider:
     def get_client(name: str) -> EmbeddingsGenerator:
         if name == 'SPACES_TEXT':
             return SpacesGradioTextEmbeddings(
-                endpoint_url=get_env_or_fail("EMBEDDINGS_GENERATION_URL"),
-                endpoint_key=get_env_or_fail("EMBEDDINGS_GENERATION_KEY"),
+                endpoint_url=get_env_or_fail("SPACES_URL"),
+                endpoint_key=get_env_or_fail("SPACES_KEY"),
                 batch_size=int(get_env_or_fail("BATCH_SIZE")),
             )
         if name == 'SPACES_INSTRUCT':
             return SpacesGradioInstructTextEmbeddings(
-                endpoint_url=get_env_or_fail("EMBEDDINGS_GENERATION_URL"),
-                endpoint_key=get_env_or_fail("EMBEDDINGS_GENERATION_KEY"),
+                endpoint_url=get_env_or_fail("SPACES_URL"),
+                endpoint_key=get_env_or_fail("SPACES_KEY"),
                 batch_size=int(get_env_or_fail("BATCH_SIZE")),
             )
         if name == 'OPENAI':
