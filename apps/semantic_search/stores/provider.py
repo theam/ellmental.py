@@ -6,6 +6,8 @@ from stores.supabase_client import (
     SupabaseEmbeddingsStoreSettings,
 )
 
+from apps.semantic_search.stores.postgres.postgres import PostgresEmbeddingsStore, PostgresEmbeddingsStoreSettings
+
 
 class EmbeddingStoreProvider:
     @staticmethod
@@ -27,6 +29,13 @@ class EmbeddingStoreProvider:
                     key=get_env_or_fail("SUPABASE_KEY"),
                     table=get_env_or_fail("SUPABASE_TABLE"),
                     query_function=get_env_or_fail("SUPABASE_FUNCTION"),
+                )
+            )
+        if name == "POSTGRES":
+            return PostgresEmbeddingsStore(
+                PostgresEmbeddingsStoreSettings(
+                    # postgresql://<user>:<password>@<host>:<port>/<database>
+                    url=get_env_or_fail("POSTGRES_URL"),
                 )
             )
 

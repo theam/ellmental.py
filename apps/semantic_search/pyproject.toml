@@ -18,6 +18,7 @@ chromadb = "^0.4.0"
 python-dotenv = "^1.0.0"
 gradio-client = "^0.2.6"
 supabase = "^1.0.3"
+SQLAlchemy = "2.0.19"
 openai = "^0.27.8"
 
 [tool.poetry.scripts]
