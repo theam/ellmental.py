@@ -1,6 +1,10 @@
 from common.utils import get_env_or_fail
 from stores.base import EmbeddingsStore
 from stores.chroma import ChromaEmbeddingsStore, ChromaEmbeddingsStoreSettings
+from stores.pinecone_client import (
+    PineconeEmbeddingsStore,
+    PineconeEmbeddingsStoreSettings,
+)
 from stores.supabase_client import (
     SupabaseEmbeddingsStore,
     SupabaseEmbeddingsStoreSettings,
@@ -27,6 +31,15 @@ class EmbeddingStoreProvider:
                     key=get_env_or_fail("SUPABASE_KEY"),
                     table=get_env_or_fail("SUPABASE_TABLE"),
                     query_function=get_env_or_fail("SUPABASE_FUNCTION"),
+                )
+            )
+        if name == "PINECONE":
+            return PineconeEmbeddingsStore(
+                PineconeEmbeddingsStoreSettings(
+                    key=get_env_or_fail("PINECONE_KEY"),
+                    environment=get_env_or_fail("PINECONE_ENVIRONMENT"),
+                    index=get_env_or_fail("PINECONE_INDEX"),
+                    namespace=get_env_or_fail("PINECONE_NAMESPACE"),
                 )
             )
 
