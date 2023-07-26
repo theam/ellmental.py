@@ -22,19 +22,9 @@ class PineconeMatch(BaseModel):
 
 class PineconeEmbeddingsStore(EmbeddingsStore):
     def __init__(self, settings: PineconeEmbeddingsStoreSettings) -> None:
-        self.client = pinecone.init(
-            api_key=settings.key, environment=settings.environment
-        )
+        pinecone.init(api_key=settings.key, environment=settings.environment)
 
         self.index = Index(settings.index)
-
-    def _validate_configuration(self):
-        if not self.client:
-            raise ValueError("Pinecone client is required.")
-        if not self.index:
-            raise ValueError("Pinecone index is required.")
-        if not self.namespace:
-            raise ValueError("Pinecone namespace is required.")
 
     def store(self, embeddings: list[StoreRequest]) -> list[str]:
         self._validate_configuration()
@@ -76,14 +66,21 @@ class PineconeEmbeddingsStore(EmbeddingsStore):
         )
 
         matches: list[PineconeMatch] = query_response.get("matches")
+        search_results: list[SearchResult] = []
+        for match in matches:
+            if match.score < match_threshold:
+                continue
 
-        return [
-            SearchResult(
-                id=query_response.get("id"),
+            cluster_id = match.metadata.pop("cluster_id")
+            search_result = SearchResult(
+                id=match.id,
                 metadata=match.metadata,
                 score=match.score,
-                cluster_id=match.metadata.get("cluster_id"),
+                cluster_id=cluster_id,
             )
-            for match in matches
-            if match.score >= match_threshold
-        ]
+            search_results.append(search_result)
+        return search_results
+
+    def _validate_configuration(self):
+        if not self.index:
+            raise ValueError("Pinecone index is required.")
