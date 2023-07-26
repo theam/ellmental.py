@@ -189,3 +189,5 @@ terraform.rc
 
 .history
 
+# Ignore ChromaDB
+chroma.sqlite3

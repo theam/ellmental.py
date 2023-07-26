@@ -52,3 +52,20 @@ SUPABASE_FUNCTION="<SUPABASE_FUNCTION>"
 - `SUPABASE_FUNCTION` is the function that is used to perform similarity searches.
 
 You can check out how to set up your Supabase database [here](https://supabase.com/blog/openai-embeddings-postgres-vector).
+
+## Pinecone store
+
+Another alternative could be [Pinecone](https://www.pinecone.io/). It is a vector-oriented database created specifically for semanitc search. It is a cloud-based service, so you don't have to worry about setting up a database by yourself.
+
+```.env
+EMBEDDING_STORE="PINECONE"
+PINECONE_KEY="<PINECONE_KEY>"
+PINECONE_ENVIRONMENT="<PINECONE_ENVIRONMENT>"
+PINECONE_INDEX="<PINECONE_INDEX>"
+```
+
+- `PINECONE_KEY` is the access key of the Pinecone database.
+- `PINECONE_ENVIRONMENT` is the environment where the Pinecone project is placed.
+- `PINECONE_INDEX` is the Pinecone index (database) where embeddings are stored and queried.
+
+You can check out how to set up your Pinecone database [here](https://www.pinecone.io/).

@@ -19,6 +19,7 @@ python-dotenv = "^1.0.0"
 gradio-client = "^0.2.6"
 supabase = "^1.0.3"
 openai = "^0.27.8"
+pinecone-client = "^2.2.2"
 
 [tool.poetry.scripts]
 start = "semantic_search:start"
