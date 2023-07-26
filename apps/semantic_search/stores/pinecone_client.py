@@ -11,7 +11,6 @@ class PineconeEmbeddingsStoreSettings(BaseModel):
     key: str
     environment: str
     index: str
-    namespace: str
 
 
 class PineconeMatch(BaseModel):
@@ -28,7 +27,6 @@ class PineconeEmbeddingsStore(EmbeddingsStore):
         )
 
         self.index = Index(settings.index)
-        self.namespace = settings.namespace
 
     def _validate_configuration(self):
         if not self.client:
@@ -70,7 +68,6 @@ class PineconeEmbeddingsStore(EmbeddingsStore):
         self._validate_configuration()
 
         query_response = self.index.query(
-            namespace=self.namespace,
             top_k=limit,
             include_values=True,
             include_metadata=True,

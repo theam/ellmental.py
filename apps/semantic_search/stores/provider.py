@@ -39,7 +39,6 @@ class EmbeddingStoreProvider:
                     key=get_env_or_fail("PINECONE_KEY"),
                     environment=get_env_or_fail("PINECONE_ENVIRONMENT"),
                     index=get_env_or_fail("PINECONE_INDEX"),
-                    namespace=get_env_or_fail("PINECONE_NAMESPACE"),
                 )
             )
 
