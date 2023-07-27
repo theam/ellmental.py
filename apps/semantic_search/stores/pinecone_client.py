@@ -81,6 +81,11 @@ class PineconeEmbeddingsStore(EmbeddingsStore):
             search_results.append(search_result)
         return search_results
 
+    def delete(self, cluster_ids: list[str]) -> bool:
+        delete_result = self.index.delete(filter={"cluster_id": {"$in": cluster_ids}})
+        # delete_result is empty if the operation went successful
+        return not bool(delete_result)
+
     def _validate_configuration(self):
         if not self.index:
             raise ValueError("Pinecone index is required.")
