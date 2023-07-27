@@ -98,3 +98,32 @@ You can try this endpoint by sending a `POST` request to [http://localhost:8000/
 
   </TabItem>
 </Tabs>
+
+### Forget endpoint
+
+With the forget endpoint, you can remove any embeddings that you have previously ingested with the `learn` endpoint. When calling this endpoint, the service will remove all embeddings associated with every `cluster_id` on the provided list from database. The system will return an array with the ids from the clusters that have been "forgotten".
+
+You can try this endpoint by sending a `POST` request to [http://localhost:8000/forget](http://localhost:8000/forget) with the following body:
+
+<Tabs groupId="api-request">
+<TabItem value="json" label="JSON Body" default>
+
+```json
+{
+  "cluster_ids": ["your_file_id"]
+}
+```
+
+</TabItem>
+<TabItem value="curl" label="CURL Request">
+
+```bash
+  curl --location 'http://127.0.0.1:8000/forget' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "cluster_ids": ["your_file_id"]
+  }'
+```
+
+  </TabItem>
+</Tabs>
