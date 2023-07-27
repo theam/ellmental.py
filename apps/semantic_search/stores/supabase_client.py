@@ -1,10 +1,9 @@
 import uuid
-
 from typing import Any
 
 from pydantic import BaseModel
-from supabase.client import create_client, Client
-from stores.base import EmbeddingsStore, StoreRequest, SearchResult
+from stores.base import EmbeddingsStore, SearchResult, StoreRequest
+from supabase.client import Client, create_client
 
 
 class SupabaseEmbeddingsStoreSettings(BaseModel):
@@ -12,6 +11,7 @@ class SupabaseEmbeddingsStoreSettings(BaseModel):
     key: str
     table: str
     query_function: str
+
 
 class SupabaseEmbeddingsStore(EmbeddingsStore):
     def __init__(self, settings: SupabaseEmbeddingsStoreSettings) -> None:
@@ -77,3 +77,7 @@ class SupabaseEmbeddingsStore(EmbeddingsStore):
             )
             for row in result.data
         ]
+
+    def delete(self, cluster_ids: list[str]) -> bool:
+        self.client.from_(self.table).delete().in_("cluster_id", cluster_ids).execute()
+        return True
