@@ -100,6 +100,7 @@ Once the docker container is running, you will get a semantic search service run
 1. The documentation endpoint, with information about how to use the API: [http://localhost:8000/docs](http://localhost:8000/docs)
 2. The learn endpoint: [http://localhost:8000/learn](http://localhost:8000/learn)
 3. The search endpoint: [http://localhost:8000/search](http://localhost:8000/search)
+4. The forget endpoint: [http://localhost:8000/forget](http://localhost:8000/forget)
 
 In our [documentation site](https://python.ellmental.com) you will find more information about the capabilities of the service. Like for example, how to use Azure OpenAI to generate the embeddings, or how to make use of your own database.
 

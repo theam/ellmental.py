@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import Any, Optional, Mapping
+from typing import Any, Mapping, Optional
+
 from pydantic import BaseModel
 
 
@@ -30,3 +31,7 @@ class EmbeddingsStore(ABC):
         limit: int = 10,
     ) -> list[SearchResult]:
         """Search for embeddings and return a list of results, with its search scores."""
+
+    @abstractmethod
+    def delete(self, cluster_ids: list[str]) -> bool:
+        """Delete embeddings from the provided cluster_ids and returns True if the operation went successful"""
