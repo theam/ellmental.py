@@ -49,13 +49,16 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [require.resolve('docusaurus-plugin-fathom')],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/logoellmental.png',
       stylesheets: ['https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'],
+      fathomAnalytics: {
+        siteId: 'BQAENCTO',
+      },
       navbar: {
         logo: {
           alt: 'eLLMental Logo',
